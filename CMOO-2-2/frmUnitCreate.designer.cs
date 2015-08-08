@@ -93,10 +93,11 @@
             this.lblUnitDesc.Size = new System.Drawing.Size(102, 13);
             this.lblUnitDesc.TabIndex = 9;
             this.lblUnitDesc.Text = "Unit Description:";
-            this.lblUnitDesc.Click += new System.EventHandler(this.label1_Click);
             // 
             // lbUnitDesc
             // 
+            this.lbUnitDesc.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.lbUnitDesc.Enabled = false;
             this.lbUnitDesc.FormattingEnabled = true;
             this.lbUnitDesc.Location = new System.Drawing.Point(208, 30);
             this.lbUnitDesc.Name = "lbUnitDesc";
@@ -115,6 +116,8 @@
             // 
             // lbFormation
             // 
+            this.lbFormation.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.lbFormation.Enabled = false;
             this.lbFormation.FormattingEnabled = true;
             this.lbFormation.Location = new System.Drawing.Point(13, 139);
             this.lbFormation.Name = "lbFormation";
@@ -140,6 +143,7 @@
             this.lbService.Name = "lbService";
             this.lbService.Size = new System.Drawing.Size(155, 68);
             this.lbService.TabIndex = 4;
+            this.lbService.SelectedIndexChanged += new System.EventHandler(this.lbService_SelectedIndexChanged);
             // 
             // tabPage2
             // 
@@ -274,6 +278,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmUnitCreate";
             this.Text = "Create Unit";
+            this.Load += new System.EventHandler(this.frmUnitCreate_Load);
             this.tabUnitCreate.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
