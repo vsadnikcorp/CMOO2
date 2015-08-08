@@ -98,10 +98,12 @@
             // 
             this.lbUnitDesc.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.lbUnitDesc.Enabled = false;
+            this.lbUnitDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbUnitDesc.FormattingEnabled = true;
+            this.lbUnitDesc.ItemHeight = 16;
             this.lbUnitDesc.Location = new System.Drawing.Point(208, 30);
             this.lbUnitDesc.Name = "lbUnitDesc";
-            this.lbUnitDesc.Size = new System.Drawing.Size(205, 316);
+            this.lbUnitDesc.Size = new System.Drawing.Size(205, 308);
             this.lbUnitDesc.TabIndex = 8;
             // 
             // lblFormation
@@ -118,11 +120,14 @@
             // 
             this.lbFormation.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.lbFormation.Enabled = false;
+            this.lbFormation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbFormation.FormattingEnabled = true;
+            this.lbFormation.ItemHeight = 16;
             this.lbFormation.Location = new System.Drawing.Point(13, 139);
             this.lbFormation.Name = "lbFormation";
             this.lbFormation.Size = new System.Drawing.Size(152, 212);
             this.lbFormation.TabIndex = 6;
+            this.lbFormation.DoubleClick += new System.EventHandler(this.lbFormation_DoubleClick);
             // 
             // lblService
             // 
@@ -143,7 +148,7 @@
             this.lbService.Name = "lbService";
             this.lbService.Size = new System.Drawing.Size(155, 68);
             this.lbService.TabIndex = 4;
-            this.lbService.SelectedIndexChanged += new System.EventHandler(this.lbService_SelectedIndexChanged);
+            this.lbService.DoubleClick += new System.EventHandler(this.lbService_DoubleClick);
             // 
             // tabPage2
             // 
