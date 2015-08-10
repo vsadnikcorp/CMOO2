@@ -67,6 +67,7 @@
       <DependentUpon>frmMain.cs</DependentUpon>
       <Link>frmMain.Designer.cs</Link>
     </Compile>
+    <Compile Include="Class1.cs" />
     <Compile Include="CMOOCSQLDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

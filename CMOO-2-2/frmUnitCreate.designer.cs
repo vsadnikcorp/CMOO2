@@ -32,7 +32,6 @@
             this.tabUnitCreate = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.lblUnitDesc = new System.Windows.Forms.Label();
-            this.lbUnitDesc = new System.Windows.Forms.ListBox();
             this.lblFormation = new System.Windows.Forms.Label();
             this.lbFormation = new System.Windows.Forms.ListBox();
             this.lblService = new System.Windows.Forms.Label();
@@ -50,6 +49,7 @@
             this.cbBack = new System.Windows.Forms.Button();
             this.cbNext = new System.Windows.Forms.Button();
             this.cbExit = new System.Windows.Forms.Button();
+            this.lbUnitDesc = new System.Windows.Forms.ListBox();
             this.tabUnitCreate.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -93,20 +93,6 @@
             this.lblUnitDesc.Size = new System.Drawing.Size(102, 13);
             this.lblUnitDesc.TabIndex = 9;
             this.lblUnitDesc.Text = "Unit Description:";
-            // 
-            // lbUnitDesc
-            // 
-            this.lbUnitDesc.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.lbUnitDesc.DisplayMember = "UnitDesc";
-            this.lbUnitDesc.Enabled = false;
-            this.lbUnitDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbUnitDesc.FormattingEnabled = true;
-            this.lbUnitDesc.ItemHeight = 16;
-            this.lbUnitDesc.Location = new System.Drawing.Point(193, 30);
-            this.lbUnitDesc.Name = "lbUnitDesc";
-            this.lbUnitDesc.Size = new System.Drawing.Size(275, 324);
-            this.lbUnitDesc.TabIndex = 8;
-            this.lbUnitDesc.ValueMember = "UID";
             // 
             // lblFormation
             // 
@@ -165,7 +151,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(443, 416);
+            this.tabPage2.Size = new System.Drawing.Size(484, 416);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Purchase";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -241,7 +227,7 @@
             // 
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(443, 416);
+            this.tabPage3.Size = new System.Drawing.Size(484, 416);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "tabPage3";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -263,6 +249,7 @@
             this.cbNext.TabIndex = 2;
             this.cbNext.Text = "Next >>>";
             this.cbNext.UseVisualStyleBackColor = true;
+            this.cbNext.Click += new System.EventHandler(this.cbNext_Click);
             // 
             // cbExit
             // 
@@ -272,7 +259,21 @@
             this.cbExit.TabIndex = 3;
             this.cbExit.Text = "<< Exit >>";
             this.cbExit.UseVisualStyleBackColor = true;
-            this.cbExit.Click += new System.EventHandler(this.cbExit_Click);
+            // 
+            // lbUnitDesc
+            // 
+            this.lbUnitDesc.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.lbUnitDesc.DisplayMember = "UnitDesc";
+            this.lbUnitDesc.Enabled = false;
+            this.lbUnitDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbUnitDesc.FormattingEnabled = true;
+            this.lbUnitDesc.ItemHeight = 16;
+            this.lbUnitDesc.Location = new System.Drawing.Point(193, 30);
+            this.lbUnitDesc.Name = "lbUnitDesc";
+            this.lbUnitDesc.Size = new System.Drawing.Size(275, 324);
+            this.lbUnitDesc.TabIndex = 8;
+            this.lbUnitDesc.ValueMember = "UID";
+            this.lbUnitDesc.DoubleClick += new System.EventHandler(this.lbUnitDesc_DoubleClick_1);
             // 
             // frmUnitCreate
             // 
@@ -301,7 +302,6 @@
         private System.Windows.Forms.TabControl tabUnitCreate;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Label lblUnitDesc;
-        private System.Windows.Forms.ListBox lbUnitDesc;
         private System.Windows.Forms.Label lblFormation;
         private System.Windows.Forms.ListBox lbFormation;
         private System.Windows.Forms.Label lblService;
@@ -319,5 +319,6 @@
         private System.Windows.Forms.Button cbBack;
         private System.Windows.Forms.Button cbNext;
         private System.Windows.Forms.Button cbExit;
+        private System.Windows.Forms.ListBox lbUnitDesc;
     }
 }
